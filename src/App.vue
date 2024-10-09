@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+      <header class="app-header">
+          <h1>Diário de Memórias</h1>
+      </header>
+      <HomePage/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './views/HomePage.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HomePage      
+  },
+  methods: {
+      refreshMemories() {
+          this.$refs.memoryList.fetchMemories();
+      },
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0;
+  padding: 0;
+}
+.app-header {
+  background-color: #d24d94;
+  color: white;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+h1 {
+  font-family: 'Pacifico', cursive;
 }
 </style>

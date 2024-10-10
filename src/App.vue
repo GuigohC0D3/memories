@@ -37,4 +37,27 @@ export default {
 h1 {
   font-family: 'Pacifico', cursive;
 }
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 20px; /* Ajuste o tamanho conforme necessário */
+    height: 20px;
+    background-color: #d81b60; /* Cor do coração */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Forma de coração */
+    animation: heartBeat 1s infinite; /* Animação de batimento */
+    opacity: 0.7; /* Levemente transparente */
+}
+
 </style>

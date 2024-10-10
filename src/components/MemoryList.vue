@@ -1,6 +1,6 @@
 <template>
     <div class="memory-list">
-        <h2>Memórias</h2>
+        <h2>Timeline Romance</h2>
         <div v-for="memory in memories" :key="memory.id" class="memory-item">
             <h3>{{ memory.title }}</h3>
             <p>{{ memory.description }}</p>
